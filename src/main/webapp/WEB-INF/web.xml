@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+  <display-name>biblionerds</display-name>
+
+  <!-- Welcome files -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+
+  <!-- LoginServlet -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>biblionerds.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <!-- SignupServlet -->
+  <servlet>
+    <servlet-name>SignupServlet</servlet-name>
+    <servlet-class>biblionerds.SignupServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignupServlet</servlet-name>
+    <url-pattern>/signup</url-pattern>
+  </servlet-mapping>
+
+  <!-- SellServlet -->
+  <servlet>
+    <servlet-name>SellServlet</servlet-name>
+    <servlet-class>biblionerds.SellBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SellServlet</servlet-name>
+    <url-pattern>/sell</url-pattern>
+  </servlet-mapping>
+
+  <!-- GetBooksServlet (added) -->
+  <servlet>
+    <servlet-name>GetBooksServlet</servlet-name>
+    <servlet-class>biblionerds.GetBooksServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetBooksServlet</servlet-name>
+    <url-pattern>/GetBooksServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>

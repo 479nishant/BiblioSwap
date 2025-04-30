@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblio Nerds - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Biblio Nerds</h1>
+            <p>Your one-stop platform for buying and selling books!</p>
+            <div class="cta-buttons">
+                <a href="#buy-section" class="btn">Buy Books</a>
+                <a href="#sell-section" class="btn">Sell Books</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section id="search-section" class="search-section">
+        <h2>Search Books</h2>
+        <input type="text" id="search-input" placeholder="Search by book name or genre">
+        <button id="search-btn" class="btn">Search</button>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy-section" class="buy-section">
+        <h2>Buy Books</h2>
+        <div class="book-list" id="book-list">
+            <!-- Sample books with random names and contacts -->
+            <div class="book-item">
+                <h3>Introduction to Java Programming</h3>
+                <p>Price: ₹400</p>
+                <p>Contact: Ramesh Kumar - 9876543210</p>
+                <p>Email: ramesh@example.com</p>
+                <p>Genre: Programming</p>
+                <p>Condition: Good</p>
+                <a href="buy-page.html?bookId=1" class="btn">Buy Now</a>
+            </div>
+            <div class="book-item">
+                <h3>Advanced Data Structures</h3>
+                <p>Price: ₹500</p>
+                <p>Contact: Priya Sharma - 9988776655</p>
+                <p>Email: priya@example.com</p>
+                <p>Genre: Computer Science</p>
+                <p>Condition: Very Good</p>
+                <a href="buy-page.html?bookId=2" class="btn">Buy Now</a>
+            </div>
+            <div class="book-item">
+                <h3>History of India</h3>
+                <p>Price: ₹350</p>
+                <p>Contact: Amit Verma - 9123456789</p>
+                <p>Email: amit@example.com</p>
+                <p>Genre: History</p>
+                <p>Condition: Excellent</p>
+                <a href="buy-page.html?bookId=3" class="btn">Buy Now</a>
+            </div>
+            <div class="book-item">
+                <h3>Philosophy for Beginners</h3>
+                <p>Price: ₹250</p>
+                <p>Contact: Neha Mehta - 9876123456</p>
+                <p>Email: neha@example.com</p>
+                <p>Genre: Philosophy</p>
+                <p>Condition: Average</p>
+                <a href="buy-page.html?bookId=4" class="btn">Buy Now</a>
+            </div>
+            <div class="book-item">
+                <h3>Modern Mathematics</h3>
+                <p>Price: ₹600</p>
+                <p>Contact: Anil Joshi - 9988775544</p>
+                <p>Email: anil@example.com</p>
+                <p>Genre: Mathematics</p>
+                <p>Condition: Fair</p>
+                <a href="buy-page.html?bookId=5" class="btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Section -->
+    <section id="sell-section" class="sell-section">
+        <h2>Sell Your Book</h2>
+        <form action="sell" method="POST">
+            <div class="form-group">
+                <label for="book-name">Book Name</label>
+                <input type="text" id="book-name" name="book-name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number</label>
+                <input type="text" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <select id="genre" name="genre" required>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-Fiction">Non-Fiction</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Philosophy">Philosophy</option>
+                    <option value="Poetry">Poetry</option>
+                    <option value="Art">Art</option>
+                    <option value="Psychology">Psychology</option>
+                    <option value="Business">Business</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Self-Help">Self-Help</option>
+                    <option value="Health">Health</option>
+                    <option value="Education">Education</option>
+                    <option value="Cooking">Cooking</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="book-condition">Book Condition</label>
+                <select id="book-condition" name="book-condition" required>
+                    <option value="Fair">Fair</option>
+                    <option value="Average">Average</option>
+                    <option value="Good">Good</option>
+                    <option value="Very Good">Very Good</option>
+                    <option value="Excellent">Excellent</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="your-name">Your Name</label>
+                <input type="text" id="your-name" name="your-name" required>
+            </div>
+            <div class="form-group">
+                <label for="your-address">Your Address</label>
+                <input type="text" id="your-address" name="your-address" required>
+            </div>
+            <button type="submit" class="btn">Upload Book</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Biblio Nerds. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
